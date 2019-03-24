@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,OAAO,CAAA;EACH,QAAQ,EAAE,MAAM;EAChB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,IAAI;EACrB,WAAW,EAAE,MAAM;EACnB,WAAW,EAAE,IAAI;CACpB;;AACD,AAAA,YAAY,CAAA;EACR,OAAO,EAAE,IAAI;EACb,UAAU,EAAE,6BAA6B,CAAC,MAAM,CAAC,cAAc,CAAC,SAAS;CAC5E",
+    "sources": [
+        "bascet.scss"
+    ],
+    "names": [],
+    "file": "bascet.css"
+}
