@@ -1,0 +1,17 @@
+
+.shop {
+    
+    width: 30%;
+    border-right: 1px solid #777777;
+}
+
+.shop__categori {
+    display: block;
+    text-decoration: none;
+    color: #777777;
+    margin: 5px;
+}
+
+.shop__categori:hover{
+    color: orange;
+}

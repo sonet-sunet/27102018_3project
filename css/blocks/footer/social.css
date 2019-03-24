@@ -1,0 +1,38 @@
+
+
+
+.social__icon {
+    margin-top:10px;
+    display: flex;
+ 
+}
+
+.social__text {
+    margin-top: 10px;
+    color: #777777;
+
+}
+
+
+.social__icon__pic {
+    width: 40px;
+    height: 40px;
+    margin-right:10px;
+    border: 2px solid #777777;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+
+}
+
+.twitter {
+    background-image: url(/images/icon/twitter.png);
+}
+
+.facebook {
+    background-image: url(/images/icon/facebook.png);
+}
+
+.insta {
+    background-image: url(/images/icon/insta.png);
+}

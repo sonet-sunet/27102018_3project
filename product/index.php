@@ -1,14 +1,16 @@
 <?php
+
     $pageConfig = [
-        'title'=> 'Карточка товара',
-        'cssFiles'=>[
-            '/css/catalog.css'
+        'title'=> 'Мужчинам',
+        'cssFiles' => [
+            '/css/product.css'
         ],
-        'jsFiles'=>[
+        'jsFiles'=> [
             '/js/script.js',
-            '/js/product.js',
+            '/js/product.js'
         ]
     ];
+
     include($_SERVER['DOCUMENT_ROOT'].'/parts/header.php');
 
     $template = [
@@ -31,24 +33,37 @@
         while( $row = mysqli_fetch_assoc($result_sizes) ){
             $template['sizes'][] = $row;     
         }
-
-        echo "<pre>";
-        print_r($template['sizes']);
-        echo "</pre>";
     }
 ?>
 
-<h1><?=$template['product']['name']?></h1>
-<img src='<?=$template['product']['photo']?>'>
-<p><?=$template['product']['price']?> руб.</p>
 
-<div>
-    <?php foreach($template['sizes'] as $size): ?>
-        <span><?=$size['size']?></span>
-    <?php endforeach; ?>
+<div class="directs">
+    <a href="#" class="directs__dir">Главная/</a>
+    <a href="#" class="directs__dir">Мужчинам/</a>
+    <a href="#" class="directs__dir">Обувь/</a>
+    <a href="#" class="directs__dir"><?=$template['product']['name']?></a>
 </div>
 
-<button class='add-to-basket' data-product-id='<?=$template['product']['id']?>'>Добавить в корзину</button>
+
+
+<div class="product">
+    <div class="product__block_color">
+        <div class="product_image" style="background-image:url('<?=$template['product']['photo']?>')"></div>
+    </div>
+    <h1></h1>
+    <p class="article">Артикул <?=$template['product']['sku']?></p>
+    <p class="price"><?=$template['product']['price']?> руб.</p>
+    <p  class="desk"><?=$template['product']['description']?></p>
+    <p class="desk">Размер</p>
+    <div class ="sizes">
+        <?php foreach($template['sizes'] as $size): ?>
+            <div class="sizes__item"><?=$size['size']?></div>
+        <?php endforeach; ?>
+    </div>
+</div>    
+
+<div class='add-to-basket' data-product-id = '<?=$template['product']['id']?>'>Добавить в корзину</div>
+
 <?php 
     include($_SERVER['DOCUMENT_ROOT'].'/parts/footer.php');
 ?> 

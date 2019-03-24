@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vue.js</title>
+    <title>Document</title>
 </head>
 <body>
-    <div class="app">
-        {{title}}
-    </div>
-    <button>Клики</button>
-    <div class="counter">
-        {{count}}
-        <mark>Кол-во кликов {{count_clicks}}</mark>
-    </div>
+<div class="app">
+    {{title}}
+</div>
+<div class="counter">
+    {{count}}
+</div>
+<button>{{proba}}</button>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="script.js"></script>
 </body>

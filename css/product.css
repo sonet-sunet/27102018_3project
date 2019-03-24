@@ -1,0 +1,94 @@
+@import url("blocks/basket.css");
+@import url("blocks/catalog.css");
+@import url("blocks/header.css");
+@import url("blocks/logo.css");
+@import url("blocks/navigation.css");
+@import url("blocks/user-info.css");
+@import url("blocks/wrapper.css");
+@import url("blocks/footer/collection.css");
+@import url("blocks/footer/footer.css");
+@import url("blocks/footer/shop.css");
+@import url("blocks/footer/social.css");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.product {
+  width: 100%;
+  margin: 10vh auto;
+}
+
+.product__block_color {
+  background: rgba(128, 128, 128, 0.288);
+}
+
+.product_image {
+  margin: auto;
+  width: 100%;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 40px;
+  font-weight: 100;
+}
+
+p {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.price {
+  font-style: italic;
+}
+
+.article {
+  color: #777777;
+  font-size: 16px;
+  margin-top: 0;
+}
+
+.desk {
+  color: #777777;
+  font-style: inherit;
+  font-size: 20px;
+}
+
+.sizes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.sizes__item {
+  border: 1px solid #777777;
+  text-align: center;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+}
+
+.add-to-basket {
+  max-width: 200px;
+  height: 60px;
+  margin: 1vh auto;
+  text-align: center;
+  line-height: 60px;
+  background: orange;
+  cursor: pointer;
+}
+/*# sourceMappingURL=product.css.map */
