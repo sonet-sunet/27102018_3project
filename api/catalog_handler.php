@@ -7,12 +7,13 @@
     $result_data = [
         'products'=>[],
         'pagination'=>[
-            'countPage'=> 5,
+            'countPage'=> 1,
             'nowPage'=> $page
         ]
     ];
 
     sleep(1);
+    
     $sql_len = "SELECT COUNT(id) as len FROM products";
     $count_products = mysqli_fetch_assoc( mysqli_query($db, $sql_len) )['len'];
     // $len = mysqli_query($db, $sql_len);
