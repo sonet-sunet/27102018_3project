@@ -1,0 +1,262 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@import url('blocks/basket.css');   
+@import url('blocks/catalog.css'); 
+@import url('blocks/header.css'); 
+@import url('blocks/logo.css'); 
+@import url('blocks/navigation.css'); 
+@import url('blocks/user-info.css'); 
+@import url('blocks/wrapper.css'); 
+@import url('blocks/footer/collection.css');
+@import url('blocks/footer/footer.css');
+@import url('blocks/footer/shop.css');
+@import url('blocks/footer/social.css');
+
+h1 {
+    text-align: center;
+    color: #353030;
+    font-weight: 100;
+    font-size: 50px;
+    margin-top: 15vh;
+    text-transform: uppercase; 
+}
+
+p {
+    color: #777777;
+    font-style: italic;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.ad__buttton {
+    padding: 0 5px;
+    height: 60px;
+    max-width: 222px;;
+    text-align: center;
+    line-height: 60px;
+    color:#777777;
+    border: 2px solid #777777;
+    margin: auto;
+    display: block;
+    text-decoration: none;
+    margin: 5vh auto;
+    text-transform: uppercase;
+}
+
+//большой блок с моделями
+.model {
+    display: flex;
+    flex-wrap:wrap;
+    width: 100%;
+}
+
+.model__item_1 {
+    width: 50%;
+    height: 900px;
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+
+.item_1__block_1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item_1__inside {
+    width: 40%;
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+.inside__pic {
+    background-image: url(/images/1.jpg);
+}
+
+.inside__pic_2 {
+    background-image: url(/images/4.jpg);
+}
+
+.item_1__inside__text {
+    color: white;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin: auto;
+    padding-top: 250px;
+    text-align: center;
+}
+
+.block__disposal {
+    width: 60%;
+}
+
+.model__disposal_1 {
+    box-sizing: border-box;
+    min-height: 300px;
+    background: rgb(102, 100, 102);
+}
+
+.model__disposal_1__text {
+    width: 60%;
+    color: #af9f9f;
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    padding-top: 100px;
+}
+
+// .elem {
+//     width: 50%;
+//     margin: auto;
+//     height: 60px;
+//     background: red;
+//     position: relative;
+// }
+
+// .elem__left_line {
+//     width: 25px;
+//     height: 3px;
+//     background: white;
+//     position: absolute;
+//     top: 20px;
+//     left: 20px;
+// }
+
+// .elem__circle {
+//     width: 40px;
+//     height: 40px;
+//     border-radius: 50%;
+//     border: 1px solid white;
+//     position: absolute;
+// }
+
+// .elem__circle__vert_line {
+//     height: 30px;
+//     width: 3px;
+//     background: white;
+//     position: absolute;
+// }
+
+// .elem__right_line {
+//     width: 25px;
+//     height: 3px;
+//     background: white;
+//     position: absolute;
+//     top: 20px;
+//     right: 20px;
+// }
+
+.model__disposal_2{
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+}
+
+.model__disposal_2_pic {
+    background-image: url(/images/2.jpg)
+}
+
+.model__disposal_2_pic_2 {
+    background-image: url(/images/sport.jpg)
+}
+
+.model__disposal_2__text {
+    color: white;
+    margin:auto;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 100px;
+}
+
+.opacity {
+    background: rgba(20, 19, 19, 0.397);
+    height: 300px;
+}
+
+.smoll_model {
+    display: flex; 
+    width: 100%;
+    height: 300px;
+}
+
+.smoll_model_1 {
+    width: 40%;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.smoll_model_2 {
+    width: 60%;
+    background: rgb(50, 50, 51);
+}
+
+.smoll_model_1_pic {
+    background-image: url(/images/brown_leather_belt_fashion-860717.jpg);
+}
+
+.smoll_model_1_pic_2 {
+    background-image: url(/images/3.jpg);
+}
+.smoll_model_2__text {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin: auto;
+    font-size: 25px;
+    padding-top: 120px;
+}
+
+.model__item_2 {
+    width: 50%;
+    height: 900px;
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+
+//форма!
+
+.form {
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 5vh;
+}
+
+#subscript {
+    display: flex;
+    justify-content: center;
+}
+
+input[type=text] {
+    width: 40%;
+    height: 60px;
+    padding: 0 5px;
+    border: 1px solid #777777;
+    color: #777777;
+    font-style: italic;
+    font-size: 16px;
+}
+
+input[type=submit] {
+    cursor: pointer;
+    width: 10%;
+    height: 62px;
+    // border: 1px solid #777777;
+    background: orange;
+    color: white;
+}
+
+.error {
+    color: red;
+    font-style: italic;
+    margin-top: 5vh;
+}

@@ -1,0 +1,18 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+    border-bottom: 2px solid #777777;
+}
+
+.directs {
+    margin-top: 4vh;
+}
+
+.directs__dir {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #777777;
+    margin-right: 1vw;
+}

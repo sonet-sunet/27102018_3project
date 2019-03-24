@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url("style.css");
 @import url("blocks\basket-info\__pic\basket-info__pic.css");
 @import url("blocks\basket-info\basket-info.css");
@@ -20,13 +21,40 @@
 @import url("blocks\footer\footer.css");
 @import url("blocks\footer\footer-item\footer-item.css");
 @import url("blocks\footer\footer-item\__socials\footer-item__socials.css");
+=======
+@import url("blocks/basket.css");
+@import url("blocks/catalog.css");
+@import url("blocks/header.css");
+@import url("blocks/logo.css");
+@import url("blocks/navigation.css");
+@import url("blocks/user-info.css");
+@import url("blocks/wrapper.css");
+@import url("blocks/footer/collection.css");
+@import url("blocks/footer/footer.css");
+@import url("blocks/footer/shop.css");
+@import url("blocks/footer/social.css");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+>>>>>>> origin/sklyarova
 
 .main-header{
   text-transform: uppercase;
   text-align: center;
+  margin: 3vh 0;
+}
+
+.main_about {
+  text-align: center;
+  color: #777777;
+  font-style: italic;
+  font-size: 25px;
 }
 .catalog{
   display: flex;
+<<<<<<< HEAD
   flex-wrap: wrap;
   transition: 1s all;
   margin:20px auto;
@@ -35,3 +63,70 @@
 .catalog.preload{
   opacity: 0.2;
 }
+=======
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+}
+
+.product {
+  width: 22%;
+  min-width: 250px;
+}
+
+.product__img {
+  margin-top: 100px;
+  width: 100%;
+  border: 2px solid gray;
+  min-height: 300px;
+  background: center center / 80% no-repeat;
+}
+
+.product__name {
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.product__price {
+  color: black;
+  text-align: center;
+  font-size: 20px;
+}
+
+.pagination {
+  margin-top: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pagination-item {
+  color: white;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background: black;
+  text-align: center;
+  line-height: 40px;
+  margin: 5px;
+  border: 1px solid black;
+}
+
+.active {
+  background: white;
+  color: black;
+}
+/*# sourceMappingURL=catalog.css.map */
+>>>>>>> origin/sklyarova

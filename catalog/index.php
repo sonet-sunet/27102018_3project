@@ -9,6 +9,8 @@
             '/js/catalog.js'
         ]
     ];
+
+
     include($_SERVER['DOCUMENT_ROOT'].'/parts/header.php');
 
 ?>

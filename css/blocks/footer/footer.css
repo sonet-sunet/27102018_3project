@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url("footer-item\_center\footer-item_center.css");
 
 .footer{
@@ -10,3 +11,14 @@
     border-left: 1px solid grey;
     border-right: 1px solid grey;
 }
+=======
+
+.footer {
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15vh;
+}
+
+>>>>>>> origin/sklyarova
