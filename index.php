@@ -1,13 +1,4 @@
 <?php 
-    $pageConfig = [
-        'title'=> 'Главная страница',
-        'cssFiles'=>[
-            '/css/catalog.css'
-        ],
-        'jsFiles'=>[
-            '/js/script.js'
-        ]
-    ];
     include($_SERVER['DOCUMENT_ROOT'].'/parts/header.php');
 ?>
 
