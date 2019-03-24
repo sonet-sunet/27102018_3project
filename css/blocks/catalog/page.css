@@ -1,0 +1,27 @@
+.page{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;  
+    margin: 0 auto;
+    width: 120px;
+    margin-bottom: 70px;
+}
+.page__number{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border: rgb(70, 70, 70) 2px solid;
+    line-height: 20px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: 0.5s all;
+    background: rgb(70, 70, 70);
+    color: #ffffff;
+}
+.page__number:hover{
+    background: #ffffff;
+    color:  rgb(70, 70, 70);
+    border: rgb(70, 70, 70) 2px solid;
+
+}

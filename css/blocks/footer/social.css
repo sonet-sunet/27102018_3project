@@ -1,0 +1,29 @@
+.social__items{
+    font-weight: 400;
+}
+.social__item {
+    color: rgb(70, 70, 70);
+
+}
+.social-items-pic{
+    display: flex;
+    width: 150px;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+.twitter{
+    background: url(/images/icon/twitter.png) center center / contain no-repeat;
+    width: 30px;
+    height: 30px;
+}
+.instagram{
+    background: url(/images/icon/instagram.png) center center / contain no-repeat;
+    width: 30px;
+    height: 30px;
+}
+.facebook{
+    background: url(/images/icon/facebook.png) center center / contain no-repeat;
+    width: 30px;
+    height: 30px;
+}

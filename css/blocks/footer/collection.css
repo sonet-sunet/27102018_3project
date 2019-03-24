@@ -1,0 +1,11 @@
+.collection__items{
+    font-weight: 400;
+}
+.collection__item{
+    text-decoration: none;
+    display: block;
+    color:  rgb(70, 70, 70);
+}
+.collection{
+    display: block;
+}

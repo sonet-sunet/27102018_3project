@@ -1,0 +1,10 @@
+.breadcrumbs{
+    font-weight: 200;
+    color: rgb(70, 70, 70);
+    display: flex;
+    padding-top: 30px;
+
+}
+.breadcrumbs p{
+    padding-right: 5px;
+}

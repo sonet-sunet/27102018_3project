@@ -1,0 +1,11 @@
+.shops__items{
+    font-weight: 400;
+}
+.shops__item{
+    text-decoration: none;
+    display: block;
+    color:  rgb(70, 70, 70);
+}
+.shops{
+    display: block;
+}

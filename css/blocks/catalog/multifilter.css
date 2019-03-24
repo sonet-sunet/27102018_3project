@@ -1,0 +1,22 @@
+.multifilter{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;  
+    margin: 0 auto;
+    width: 600px;
+}
+.multifilter__item{
+    display: flex;
+    width: 150px;
+    color: rgb(70, 70, 70);
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 15px;    justify-content: space-between;
+    border-bottom: solid rgb(70, 70, 70) 2px;
+}
+.multifilter__pic{
+    background: url(/images/icon/drop-down-arrow.png) center center / contain no-repeat;
+    width: 10px;
+    height: 10px;
+}

@@ -1,0 +1,18 @@
+.info-menu{
+    text-align: center;
+    padding: 70px 0 170px 0;
+
+}
+.info-menu h2{
+    font-size: 40px;
+    font-weight: 200;
+    color: rgb(70, 70, 70);
+}
+.info-menu h3{
+    padding: 40px 0;
+    font-weight: 200;
+    color: rgb(70, 70, 70);
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+

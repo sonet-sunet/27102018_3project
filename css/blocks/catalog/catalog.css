@@ -1,0 +1,13 @@
+.catalog{
+    transition: 1s all;
+}
+
+.catalog.preload {
+    opacity: 0;
+}
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px 0;
+}

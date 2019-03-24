@@ -1,0 +1,25 @@
+form{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+form input[type="email"]{
+    width: 300px;
+    padding: 10px 7px;
+    border: rgb(177, 177, 177) solid 1px;
+    box-sizing: border-box;
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+form button{
+    width: 119px;
+    box-sizing: border-box;
+    background-color: orange;
+    padding: 10px 7px;
+    font-size: 13px;
+    cursor: pointer;
+    color: #ffffff;
+}

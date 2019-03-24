@@ -49,45 +49,17 @@ class Catalog{
     preloadOff(){
         this.el.classList.remove('preload');
     }
-    renderPagination(configPagination){
-        let paginationEl = document.querySelector('.pagination');
-        
-        paginationEl.innerHTML = '';
-
-        for(let i = 1; i <= configPagination.countPage; i++){
-            let div = document.createElement('div');
-            div.classList.add('pagination-item');
-
-            if( configPagination.nowPage == i ){
-                div.classList.add('active');
-            }
-
-            div.innerHTML = i;
-            div.setAttribute('data-page', i);
-
-            paginationEl.appendChild(div);
-
-            let that = this;
-            div.addEventListener('click', function(){
-                that.load( this.getAttribute('data-page') );    
-            });
-        }
-    }
-    load(page = 1){
+    load(){
         this.preloadOn();
         let xhr = new XMLHttpRequest();
-        xhr.open('GET', `/api/catalog_handler.php?section=${this.section}&page=${page}`);
+        xhr.open('GET', `/api/catalog_handler.php?section=${this.section}`);
         xhr.send();
 
         xhr.addEventListener('load', ()=>{
             // https://bit.ly/2MWQ5JJ
             let data = JSON.parse(xhr.responseText);
-
-            console.log( data );
-            this.renderPagination( data.pagination );
-
             this.empty();
-            data.products.forEach((product)=>{
+            data.forEach((product)=>{
                 console.log(product);
                 let newProduct = new Product(product.name, product.price, 
                                         product.photo, product.id, product.sale);
