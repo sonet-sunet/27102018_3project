@@ -1,0 +1,9 @@
+.user-info{
+    display: flex;
+    margin: 0 20px;
+    align-items: center;
+    margin-left: auto;
+}
+.text_active{
+    color: orange;
+}

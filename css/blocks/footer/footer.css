@@ -1,0 +1,12 @@
+@import url("footer-item\_center\footer-item_center.css");
+
+.footer{
+    display: flex;
+    margin:150px auto 30px auto;
+    justify-content: space-between;
+}
+
+.footer-break{
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+}

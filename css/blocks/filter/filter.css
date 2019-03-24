@@ -1,0 +1,21 @@
+.filter{
+    width: 60%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+}
+.filter div{
+    width: 17%;
+    border-radius: 5px;
+  border-bottom: 1px solid rgb(150, 149, 149);
+  cursor: pointer;
+  color : rgb(150, 149, 149);
+  position: relative;
+  background-color: rgb(241, 241, 241)
+}
+.filter div:after{
+    content: "\2304";
+    position: absolute;
+    right :0;
+    bottom: 3px;
+}

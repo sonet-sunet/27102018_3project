@@ -1,0 +1,19 @@
+.footer-item__socials{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.footer-item__socials a{
+    padding: 20px;
+    border: 1px solid black;
+    margin-right: 15px;
+}
+#twitter{
+    background: url(/images/icons/twitter.png) center center / 60% no-repeat;
+}
+#facebook{
+    background: url(/images/icons/facebook.png) center center / 60% no-repeat;
+}
+#instagram{
+    background: url(/images/icons/instagram.png) center center / contain no-repeat;
+}

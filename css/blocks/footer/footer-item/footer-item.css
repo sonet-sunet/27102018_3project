@@ -1,0 +1,14 @@
+.footer-item{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.footer-item a{
+    text-decoration: none;
+    color:black;
+    margin-bottom: 8px;
+}
+.footer-item a:hover{
+    color: orange;
+}

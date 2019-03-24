@@ -1,0 +1,58 @@
+@import url("style.css");
+@import url("blocks\basket-info\__pic\basket-info__pic.css");
+@import url("blocks\basket-info\basket-info.css");
+@import url("blocks\header\__logo\header__logo.css");
+@import url("blocks\header\header.css");
+@import url("blocks\navigation\__item\navigation__item.css");
+@import url("blocks\navigation\navigation.css");
+@import url("blocks\user-info\__pic\user-info__pic.css");
+@import url("blocks\user-info\user-info.css");
+@import url("blocks\wrapper.css");
+
+@import url("blocks\page-buttons\page-buttons.css");
+@import url("blocks\page-buttons\__item\page-buttons__item.css");
+@import url("blocks\page-buttons\__item\_color_white\page-buttons__item_color_white.css");
+
+
+
+@import url("blocks\footer\footer.css");
+@import url("blocks\footer\footer-item\footer-item.css");
+@import url("blocks\footer\footer-item\__socials\footer-item__socials.css");
+
+
+
+.details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* text-align: center; */
+}
+.details__img{
+    width: 80%;
+    margin: 50px auto;
+    min-height: 500px;
+    background: center center / contain no-repeat;
+}
+.details__name{
+    text-transform: uppercase;
+}
+.details__sku{
+    margin-top: -20px;
+    color : rgb(179, 179, 179);
+}
+.details__price{
+    font-style: italic;
+    color : rgb(121, 121, 121);
+}
+.details-size{
+    text-transform: uppercase;
+    margin: 30px auto 15px auto;
+}
+.add-to-basket{
+    margin-top: 50px;
+    padding: 15px;
+    background-color: orange;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+}

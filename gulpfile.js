@@ -4,37 +4,50 @@ let gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     watch = require('gulp-watch');
 
-function generateCatalog () {
-    return gulp .src( 'css/catalog.css' )
+function generateCatalog(){
+    return gulp .src('css/catalog.css')
                 .pipe(importCss())
                 .pipe(autoprefixer({
                     browsers: ['>0.1%'],
                     cascade: false
                 }))
-                .pipe(cleanCSS({level: 2}))
-                .pipe( gulp.dest('css/dist'));
+                .pipe(cleanCSS({level:2}))
+                .pipe(gulp.dest('css/dist'));
 }
-
-function generateBasket () {
-    return gulp .src( 'css/basket.css' )
+function generateDetails(){
+    return gulp .src('css/details.css')
                 .pipe(importCss())
                 .pipe(autoprefixer({
                     browsers: ['>0.1%'],
                     cascade: false
                 }))
-                .pipe(cleanCSS({level: 2}))
-                .pipe( gulp.dest('css/dist'));
+                .pipe(cleanCSS({level:2}))
+                .pipe(gulp.dest('css/dist'));
 }
-
-function watchChanes () {
-    gulp.watch('css/blocks/**/*.css', gulp.series('style'));
-    gulp.watch('css/blocks/*.css', gulp.series('styleBasket'));
+function generateBasket(){
+    return gulp .src('css/basket.css')
+                .pipe(importCss())
+                .pipe(autoprefixer({
+                    browsers: ['>0.1%'],
+                    cascade: false
+                }))
+                .pipe(cleanCSS({level:2}))
+                .pipe(gulp.dest('css/dist'));
 }
+function watchChanges () {
+    gulp.watch('css/blocks/**/*.css', gulp.series('styleCatalog'));
+    gulp.watch('css/style.css', gulp.series('styleCatalog'));
+    gulp.watch('css/catalog.css', gulp.series('styleCatalog'));
 
-// Задание, которое необходимо выполнить gulp-у
-gulp.task('style', generateCatalog );
-// Задание, которое необходимо выполнить gulp-у
+    gulp.watch('css/blocks/**/*.css', gulp.series('styleDetails'));
+    gulp.watch('css/style.css', gulp.series('styleDetails'));
+    gulp.watch('css/details.css', gulp.series('styleDetails'));
+
+    gulp.watch('css/blocks/**/*.css', gulp.series('styleBasket'));
+    gulp.watch('css/style.css', gulp.series('styleBasket'));
+    gulp.watch('css/basket.css', gulp.series('styleBasket'));
+}
+gulp.task('styleCatalog', generateCatalog );
+gulp.task('styleDetails', generateDetails );
 gulp.task('styleBasket', generateBasket );
-// задание на отслеживание
-gulp.task('watch', watchChanes);
-
+gulp.task('watch', watchChanges);

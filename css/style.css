@@ -1,0 +1,13 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.break-line{
+    width: 100%;
+    height: 1px;
+    background-color: rgb(150, 149, 149);
+    margin-bottom: 40px;
+}
+.breadcrumbs{
+    text-transform: uppercase;
+    color : rgb(150, 149, 149);
+}

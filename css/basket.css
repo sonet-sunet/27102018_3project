@@ -1,0 +1,25 @@
+@import url("style.css");
+@import url("blocks\basket-info\__pic\basket-info__pic.css");
+@import url("blocks\basket-info\basket-info.css");
+@import url("blocks\header\__logo\header__logo.css");
+@import url("blocks\header\header.css");
+@import url("blocks\navigation\__item\navigation__item.css");
+@import url("blocks\navigation\navigation.css");
+@import url("blocks\user-info\__pic\user-info__pic.css");
+@import url("blocks\user-info\user-info.css");
+@import url("blocks\wrapper.css");
+@import url("blocks\catalog-title\catalog-title.css");
+@import url("blocks\catalog-title\__section-name\catalog-title__section-name.css");
+@import url("blocks\catalog-title\__filter-name\catalog-title__filter-name.css");
+
+@import url("blocks\product\product.css");
+@import url("blocks\product\__img\product__img.css");
+@import url("blocks\footer\footer.css");
+@import url("blocks\footer\footer-item\footer-item.css");
+@import url("blocks\footer\footer-item\__socials\footer-item__socials.css");
+
+.basket-item_row{
+    display: flex;
+    width: 100%;
+
+}
