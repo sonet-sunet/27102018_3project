@@ -11,14 +11,14 @@ class Product{
         productEl.href = `/product/?id=${this.id}`;
         productEl.classList.add('product');
 
-        if( this.sale > 0 ){
+        if(this.sale > 0){
             productEl.classList.add('sale');
         }
-        
+
         productEl.innerHTML = `
-            <div class='product__img' style='background-image:url(${(this.imgSrc == null) ? '/images/no-photo.png)' : this.imgSrc })'></div>
+            <div class='product__img' style='background-image:url(${(this.imgSrc == null) ? '/images/no-photo.png' : this.imgSrc})'></div>
             <div class='product__name'>${this.name}</div>
-            <div class='product__price'>${(this.price - this.price * this.sale)} руб.</div>
+            <div class='product__price'>${this.price - this.price * this.sale} руб.</div>
         `;
 
         el.appendChild(productEl);
@@ -36,7 +36,7 @@ class Catalog{
     }
     render(){
         this.products.forEach((productItem)=>{
-            productItem.renderProduct( this.el );
+            productItem.renderProduct(this.el);
         });
     }
     empty(){
@@ -51,14 +51,15 @@ class Catalog{
     }
     renderPagination(configPagination){
         let paginationEl = document.querySelector('.pagination');
-        
+
         paginationEl.innerHTML = '';
 
         for(let i = 1; i <= configPagination.countPage; i++){
+            console.log(i);
             let div = document.createElement('div');
-            div.classList.add('pagination-item');
+            div.classList.add('pagination__item');
 
-            if( configPagination.nowPage == i ){
+            if(configPagination.nowPage == i){
                 div.classList.add('active');
             }
 
@@ -69,7 +70,7 @@ class Catalog{
 
             let that = this;
             div.addEventListener('click', function(){
-                that.load( this.getAttribute('data-page') );    
+                that.load(this.getAttribute('data-page'));
             });
         }
     }
@@ -80,20 +81,16 @@ class Catalog{
         xhr.send();
 
         xhr.addEventListener('load', ()=>{
-            // https://bit.ly/2MWQ5JJ
             let data = JSON.parse(xhr.responseText);
-
-            console.log( data );
-            this.renderPagination( data.pagination );
-
+            console.log(data);
+            this.renderPagination(data.pagination);
             this.empty();
             data.products.forEach((product)=>{
                 console.log(product);
-                let newProduct = new Product(product.name, product.price, 
-                                        product.photo, product.id, product.sale);
-
+                // catalog.addProductArray([new Product(product)]);
+                let newProduct = new Product(product.name, product.price, product.photo, product.id, product.sale);
                 this.products.push(newProduct);
-            });  
+            });
 
             this.render();
             this.preloadOff();
@@ -102,23 +99,26 @@ class Catalog{
 }
 
 let catalog = new Catalog('man');
-// catalog.addProductArray([new Product('Кроссовки', 4500, null, 100), new Product('Футболка красная', 1200, null, 15)]);
+// catalog.addProductArray([new Product('Кроссовки', 4500, null, 1), new Product('Сапоги', 7000, '/images/shoes.jpg', 2)]);
 catalog.load();
+// catalog.render();
 
 // setTimeout(()=>{
 //     // catalog.empty();
 //     catalog.preloadOn();
-// }, 5000);
+// }, 2000);
 
 // setTimeout(()=>{
 //     catalog.preloadOff();
-// }, 7000);
-
+// }, 4000);
 
 
 // let boots = new Product('Кроссовки', 4500);
-// let tShirts = new Product('Футболка красная', 1200);
+// let shoes = new Product('Сапоги', 7000, '/images/shoes.jpg');
+
 // let catalogEl = document.querySelector('.catalog');
+
 // boots.renderProduct(catalogEl);
-// tShirts.renderProduct(catalogEl);
-//console.dir(boots);
+// shoes.renderProduct(catalogEl);
+
+// console.dir(boots);

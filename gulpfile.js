@@ -1,40 +1,47 @@
 let gulp = require('gulp'),
-    importCss = require('gulp-import-css'),
-    cleanCSS = require('gulp-clean-css'),
-    autoprefixer = require('gulp-autoprefixer'),
-    watch = require('gulp-watch');
+cleanCSS = require('gulp-clean-css'),
+importCss = require('gulp-import-css'),
+autoprefixer = require('gulp-autoprefixer'),
+watch = require('gulp-watch');
 
-function generateCatalog () {
-    return gulp .src( 'css/catalog.css' )
+function generateCatalog() {
+    return gulp .src('css/catalog.css')
                 .pipe(importCss())
                 .pipe(autoprefixer({
                     browsers: ['>0.1%'],
                     cascade: false
                 }))
                 .pipe(cleanCSS({level: 2}))
-                .pipe( gulp.dest('css/dist'));
+                .pipe(gulp.dest('css/dist'));
 }
 
-function generateBasket () {
-    return gulp .src( 'css/basket.css' )
+function generateProduct() {
+    return gulp .src('css/product.css')
                 .pipe(importCss())
                 .pipe(autoprefixer({
                     browsers: ['>0.1%'],
                     cascade: false
                 }))
                 .pipe(cleanCSS({level: 2}))
-                .pipe( gulp.dest('css/dist'));
+                .pipe(gulp.dest('css/dist'));
 }
 
-function watchChanes () {
+function generateMain() {
+    return gulp .src('css/main.css')
+                .pipe(importCss())
+                .pipe(autoprefixer({
+                    browsers: ['>0.1%'],
+                    cascade: false
+                }))
+                .pipe(cleanCSS({level: 2}))
+                .pipe(gulp.dest('css/dist'));
+}
+
+function watchChanges() {
     gulp.watch('css/blocks/**/*.css', gulp.series('style'));
-    gulp.watch('css/blocks/*.css', gulp.series('styleBasket'));
 }
 
-// Задание, которое необходимо выполнить gulp-у
-gulp.task('style', generateCatalog );
-// Задание, которое необходимо выполнить gulp-у
-gulp.task('styleBasket', generateBasket );
-// задание на отслеживание
-gulp.task('watch', watchChanes);
-
+gulp.task('style', generateCatalog);
+gulp.task('product', generateProduct);
+gulp.task('main', generateMain);
+gulp.task('watch', watchChanges);
