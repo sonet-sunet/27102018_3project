@@ -10,20 +10,19 @@ class Product{
         let productEl = document.createElement('a');
         productEl.href = `/product/?id=${this.id}`;
         productEl.classList.add('product');
-
-        if( this.sale > 0 ){
+        if(this.sale > 0){
             productEl.classList.add('sale');
         }
-        
         productEl.innerHTML = `
-            <div class='product__img' style='background-image:url(${(this.imgSrc == null) ? '/images/no-photo.png)' : this.imgSrc })'></div>
-            <div class='product__name'>${this.name}</div>
-            <div class='product__price'>${(this.price - this.price * this.sale)} руб.</div>
+        <div class='product__img'style='background-image:url(${(this.imgSrc == null) ? '/images/nophoto.jpg' : this.imgSrc})'></div>
+        <div class='product__name'>${this.name}</div>
+        <div class='product__price'>${(this.price - this.price*this.sale)}</div>
         `;
-
+        
         el.appendChild(productEl);
     }
 }
+
 
 class Catalog{
     constructor(section){
@@ -36,7 +35,7 @@ class Catalog{
     }
     render(){
         this.products.forEach((productItem)=>{
-            productItem.renderProduct( this.el );
+            productItem.renderProduct(this.el);
         });
     }
     empty(){
@@ -53,72 +52,69 @@ class Catalog{
         let paginationEl = document.querySelector('.pagination');
         
         paginationEl.innerHTML = '';
-
         for(let i = 1; i <= configPagination.countPage; i++){
+            console.log(i);
             let div = document.createElement('div');
             div.classList.add('pagination-item');
-
-            if( configPagination.nowPage == i ){
+            if(configPagination.nowPage == i){
                 div.classList.add('active');
             }
-
             div.innerHTML = i;
             div.setAttribute('data-page', i);
-
             paginationEl.appendChild(div);
 
             let that = this;
             div.addEventListener('click', function(){
-                that.load( this.getAttribute('data-page') );    
+                that.load( this.getAttribute('data-page'));
             });
         }
+             
     }
     load(page = 1){
-        this.preloadOn();
         let xhr = new XMLHttpRequest();
         xhr.open('GET', `/api/catalog_handler.php?section=${this.section}&page=${page}`);
         xhr.send();
+        this.preloadOn();
 
         xhr.addEventListener('load', ()=>{
-            // https://bit.ly/2MWQ5JJ
             let data = JSON.parse(xhr.responseText);
 
             console.log( data );
-            this.renderPagination( data.pagination );
+            this.renderPagination(data.pagination);
 
             this.empty();
             data.products.forEach((product)=>{
+                // if (product.active){
+                    
+                // }
                 console.log(product);
-                let newProduct = new Product(product.name, product.price, 
-                                        product.photo, product.id, product.sale);
-
+                let newProduct = new Product(product.name, product.price, product.photo, product.id, product.sale);
                 this.products.push(newProduct);
-            });  
-
+            });
             this.render();
             this.preloadOff();
         });
+
     }
 }
 
+// let boots = new Product('Кросcовки', 4500);
+// let catalogEl = document.querySelector('.catalog');
+// boots.renderProduct(catalogEl);
+// let jeans = new Product('Джинсы', 5500, '/images/jeans.jpg');
+// jeans.renderProduct(catalogEl);
+
 let catalog = new Catalog('man');
-// catalog.addProductArray([new Product('Кроссовки', 4500, null, 100), new Product('Футболка красная', 1200, null, 15)]);
+// catalog.addProductArray([new Product('Кросcовки', 4500, null, 100), new Product('Джинсы', 5500, '/images/jeans.jpg', null, 15)]);
 catalog.load();
 
+
+
 // setTimeout(()=>{
-//     // catalog.empty();
+//     //catalog.empty();
 //     catalog.preloadOn();
-// }, 5000);
+// }, 1000);
 
 // setTimeout(()=>{
 //     catalog.preloadOff();
-// }, 7000);
-
-
-
-// let boots = new Product('Кроссовки', 4500);
-// let tShirts = new Product('Футболка красная', 1200);
-// let catalogEl = document.querySelector('.catalog');
-// boots.renderProduct(catalogEl);
-// tShirts.renderProduct(catalogEl);
-//console.dir(boots);
+// }, 3000);

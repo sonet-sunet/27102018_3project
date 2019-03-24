@@ -1,40 +1,39 @@
 let gulp = require('gulp'),
-    importCss = require('gulp-import-css'),
-    cleanCSS = require('gulp-clean-css'),
-    autoprefixer = require('gulp-autoprefixer'),
-    watch = require('gulp-watch');
+concat = require('gulp-concat'),
+importCss = require('gulp-cssimport'),
+cssmin = require('gulp-cssmin'),
+autoprefixer = require('gulp-autoprefixer'),
+watch = require('gulp-watch');
 
-function generateCatalog () {
-    return gulp .src( 'css/catalog.css' )
-                .pipe(importCss())
-                .pipe(autoprefixer({
-                    browsers: ['>0.1%'],
-                    cascade: false
-                }))
-                .pipe(cleanCSS({level: 2}))
-                .pipe( gulp.dest('css/dist'));
+function generateCatalog(){
+    return gulp.src('css/catalog.css')
+    // .pipe(concat('main.css'))
+    .pipe(importCss())
+    .pipe(autoprefixer({
+        browsers: ['>0.1%'],
+        cascade: false
+    }))
+    .pipe(cssmin())
+    .pipe(gulp.dest('css/dist'));
 }
 
-function generateBasket () {
-    return gulp .src( 'css/basket.css' )
-                .pipe(importCss())
-                .pipe(autoprefixer({
-                    browsers: ['>0.1%'],
-                    cascade: false
-                }))
-                .pipe(cleanCSS({level: 2}))
-                .pipe( gulp.dest('css/dist'));
+function generateBascet(){
+    return gulp.src('css/bascet.css')
+    // .pipe(concat('main.css'))
+    .pipe(importCss())
+    .pipe(autoprefixer({
+        browsers: ['>0.1%'],
+        cascade: false
+    }))
+    .pipe(cssmin())
+    .pipe(gulp.dest('css/dist'));
 }
 
-function watchChanes () {
+function watchChanges(){
     gulp.watch('css/blocks/**/*.css', gulp.series('style'));
-    gulp.watch('css/blocks/*.css', gulp.series('styleBasket'));
+    gulp.watch('css/blocks/*.css', gulp.series('styleBascet'));
 }
 
-// Задание, которое необходимо выполнить gulp-у
-gulp.task('style', generateCatalog );
-// Задание, которое необходимо выполнить gulp-у
-gulp.task('styleBasket', generateBasket );
-// задание на отслеживание
-gulp.task('watch', watchChanes);
-
+gulp.task('style', generateCatalog);
+gulp.task('styleBascet', generateBascet);
+gulp.task('watch', watchChanges);

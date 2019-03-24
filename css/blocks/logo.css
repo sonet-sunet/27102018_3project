@@ -1,5 +1,4 @@
-.logo {
-    background: url(/images/icon/logo.jpg) center center / contain no-repeat;
-    width: 40px;
-    height: 40px;
+.logo{
+    padding: 20px;
+    background: url(/images/icons/logo.jpg) center center/contain no-repeat;
 }

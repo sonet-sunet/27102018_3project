@@ -1,15 +1,13 @@
-.user-info {
+.user-info{
     display: flex;
+    justify-content: left;
     align-items: center;
     margin-left: auto;
 }
-
-.user-info__pic {
-    background: url(/images/icon/account.png) center center / contain no-repeat;
-    width: 30px;
-    height: 30px;
+.user-info__pic{
+    padding: 20px;
+    background: url(/images/icons/account.png) center center/contain no-repeat;
 }
-
-.text_active {
-    color: orange;
+.text_active{
+    color:orangered;
 }

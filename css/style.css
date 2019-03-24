@@ -1,0 +1,102 @@
+.details-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 100px;
+}
+
+.details-block div {
+  margin: 10px 0;
+}
+
+.details-block a {
+  display: block;
+  text-decoration: none;
+  color: #313131;
+  margin: 30px 0;
+  text-align: left;
+}
+
+.details-block a.button-add {
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 15px;
+  width: 200px;
+  height: 50px;
+  background-color: #f68235;
+  color: white;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.details-block a.button-add:hover {
+  background-color: #313131;
+  color: #ffffff;
+}
+
+.details-block .details-block-image {
+  background: url(/images/catalog/9.jpg) center center/contain no-repeat;
+  width: 90%;
+  height: 600px;
+  margin: 0 auto;
+}
+
+.details-block .details-block-size {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.details-block .details-block-size .details-block-size-item {
+  border: 1px solid #313131;
+  height: 40px;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 15px;
+  margin-top: 10px;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.details-block .details-block-size .details-block-size-item:hover {
+  background-color: #313131;
+  color: #ffffff;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #313131;
+}
+/*# sourceMappingURL=style.css.map */

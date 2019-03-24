@@ -1,35 +1,43 @@
 let app = new Vue({
-    el: '.app',
-    data:{
-        title: 'Привет, мир!'
-    }  
+  el: '.app',
+  data:{
+    title:'Hello world!'
+  }
 });
 
 let counterApp = new Vue({
-    el: '.counter',
-    data:{
-        count: 10,
-        count_clicks: 0
-    }
+  el: '.counter',
+  data:{
+    count:0
+  }
 });
 
 setInterval(()=>{
-    counterApp.count--;
-
-    if( counterApp.count == 0 && counterApp.count_clicks < 5 ){
-        alert('Вы проиграли');
-    }
+  counterApp.count++;
 }, 1000);
 
-let btn = document.querySelector('button');
-btn.addEventListener('click', function(){
-    counterApp.count_clicks++;
-
-    if( counterApp.count_clicks == 5 ){
-        alert('Вы выиграли');
-    }
+let countdownApp = new Vue({
+  el: '.countdown',
+  data:{
+    count:10,
+    count_clicks:0
+  }
 });
+let button = document.querySelector('.button');
 
-//Задача:
-// Идет обратный отчсет 10, 9, 8
-// Нужно успеть кликнуть на кнопку 5 раз пока не кончился отсчет
+setInterval(()=>{
+  countdownApp.count--;
+  if(countdownApp.count==0 && countdownApp.count_clicks!=5){
+    alert('YOU LOSE!');
+  }
+  if(countdownApp.count==0 && countdownApp.count_clicks==5){
+    clearInterval();
+  }
+}, 1000);
+
+button.addEventListener('click', function(){
+  countdownApp.count_clicks++;
+  if(countdownApp.count_clicks==5){
+    alert('YOU WIN!');
+  }
+});

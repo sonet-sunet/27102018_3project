@@ -1,10 +1,13 @@
-@import url("blocks/basket.css");
+@import url("blocks/bascet.css");
 @import url("blocks/catalog.css");
 @import url("blocks/header.css");
 @import url("blocks/logo.css");
 @import url("blocks/navigation.css");
 @import url("blocks/user-info.css");
 @import url("blocks/wrapper.css");
+@import url("blocks/footer.css");
+@import url("blocks/product.css");
+@import url("blocks/main.css");
 * {
   margin: 0;
   padding: 0;
@@ -19,22 +22,68 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  min-height: 500px;
 }
 
-.product {
-  width: 22%;
-  min-width: 250px;
+.catalog a {
+  text-decoration: none;
+  color: #000000;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
 }
 
-.product__img {
-  width: 100%;
-  border: 2px solid gray;
-  min-height: 300px;
-  background: center center / 80% no-repeat;
+.catalog a:hover {
+  color: orangered;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pagination-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  background-color: black;
+  color: #ffffff;
+  -webkit-transition: 0.8s all;
+  transition: 0.8s all;
+  cursor: pointer;
+}
+
+.pagination-item.active {
+  background-color: #ffffff;
+  color: black;
+}
+
+.pagination-item:hover {
+  background-color: #ffffff;
+  color: black;
 }
 /*# sourceMappingURL=catalog.css.map */

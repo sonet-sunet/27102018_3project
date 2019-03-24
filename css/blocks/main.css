@@ -1,0 +1,113 @@
+h1{
+    text-align: center;
+}
+a{
+    display: block;
+    text-decoration: none;
+    color:#313131;
+    margin: 30px 0;
+    text-align: left;
+}
+a.button-new{
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        width: 200px;
+        height: 50px;
+        background-color: #ffffff;
+        color: #313131;
+        transition: 0.5s all;
+        border: 1px solid #313131;
+}
+a.button-new:hover{
+            background-color: #f68235;
+            color: #ffffff;
+}
+.main-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 50px 0;
+
+}
+.main-block .main-block__item{
+    background-color: #ffffff;
+    width: 350px;
+}
+.main-block .main-block__item .main-block__item_part{
+    height: 350px;
+    background: center center/ cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    cursor: pointer;
+}
+.main-block .main-block__item .main-block__item_part:hover{
+    opacity: 0.7;
+}
+#photo-one{
+    background-image: url(/images/1.jpg);
+}
+#photo-two{
+    background-image: url(/images/2.jpg);
+}
+#photo-three{
+    background-image: url(/images/3.jpg);
+}
+#photo-four{
+    background-image: url(/images/4.jpg);
+}
+#photo-five{
+    background-image: url(/images/5.jpg);
+}
+#photo-six{
+    background-image: url(/images/6.jpg);
+}
+.main-block .main-block__item .main-block__item_part.block-v2{
+    height: 700px;
+}
+.main-block .main-block__item .main-block__item_part.block-grey-light{
+    background-color: #b9b9b9;
+}
+.main-block .main-block__item .main-block__item_part.block-grey-dark{
+    background-color: #8f8f8f;
+}
+.subscribe{
+    margin: 300px 50px;
+    text-align: center;
+}
+form{
+    display: flex;
+    width: 50%;
+    margin: 50px auto;
+}
+form input[type="mail"]{
+    width: 100%;
+    padding: 15px 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: #8f8f8f;
+    border: 1px solid #8f8f8f;
+}
+form button {
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    width: 200px;
+    height: 50px;
+    background-color: #f68235;
+    color: white;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+    form button:hover{
+        background-color: #313131;
+        color: #ffffff;
+    }

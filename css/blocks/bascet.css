@@ -1,0 +1,11 @@
+.bascet{
+    overflow: hidden;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: auto;
+}
+.bascet__pic{
+    padding: 20px;
+    background: url(/images/icons/bascet.png) center center/contain no-repeat;
+}
